@@ -1,5 +1,5 @@
 {
-  "name": "o-dapp-marketplace",
+  "name": "o-dapp-market",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/omoearth/o-dapp-marketplace.git"
+    "url": "git+https://github.com/omoearth/o-dapp-market.git"
   },
   "author": "",
   "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/omoearth/o-dapp-marketplace/issues"
+    "url": "https://github.com/omoearth/o-dapp-market/issues"
   },
-  "homepage": "https://github.com/omoearth/o-dapp-marketplace#readme"
+  "homepage": "https://github.com/omoearth/o-dapp-market#readme"
 }
