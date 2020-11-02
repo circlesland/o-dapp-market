@@ -1,0 +1,31 @@
+name: "°dentity"
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  odentity-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: ls -la
+      - name: push o-market
+        id: omarket
+        uses: textileio/github-action-buckets@v20
+        with:
+          key: ${{ secrets.TEXTILE_ACCOUNT_KEY }}
+          secret: ${{ secrets.TEXTILE_ACCOUNT_SECRET }}
+          bucket: "o-omarket"
+          thread: "bafk3hjqnsapk7bbedswqq5pfhi3jue3kq7h6wnhgd5o7eedlrkroeva"
+          path: "src/"
+      - run: echo "bucket - ${{ steps.omarket.outputs.key }}"
+      - run: echo "ipfs - ${{ steps.omarket.outputs.ipfs }}"
+      - run: echo "ipfs link - ${{ steps.omarket.outputs.ipfsUrl }}"
+      - run: echo "ipns - ${{ steps.omarket.outputs.ipns }}"
+      - run: echo "ipns link - ${{ steps.omarket.outputs.ipnsUrl }}"
+      - run: echo "hub - ${{ steps.omarket.outputs.hub }}"
+      - run: echo "www - ${{ steps.omarket.outputs.www }}"
